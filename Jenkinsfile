@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker { image 'golang' } }
+    agent { agent { label 'Docker' } }
     stages {
         stage('build') {
             steps {
