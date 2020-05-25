@@ -1,6 +1,6 @@
 pipeline {
     // Lets Jenkins use Docker for us later.
-    agent Docker    
+    agent any    
 
     // If anything fails, the whole Pipeline stops.
     stages {
