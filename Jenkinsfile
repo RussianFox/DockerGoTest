@@ -1,8 +1,10 @@
 pipeline {
-    agent { label 'Docker' }
+    agent { 
+        label 'Docker'
+        docker { image 'golang' }
+    }
     stages {
         stage('build') {
-            agent { docker { image 'golang' } }
             steps {
                 sh 'go version'
             }
